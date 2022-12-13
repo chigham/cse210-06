@@ -32,6 +32,18 @@ class TerminalService:
             string: The user's input (as a character).
         """
         return input(prompt).upper()
+    
+    def read_number(self, prompt):
+        result = ""
+        while type(result) != int or result not in [1, 2, 3]:
+            result = input(prompt)
+            try:
+                result = int(result)
+                if result not in [1, 2, 3]:
+                    print(2 + "no")
+            except:
+                print("pick an appropriate number")
+        return result
         
     # Not used in this case
     def write_text(self, text):
