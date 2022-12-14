@@ -40,11 +40,21 @@ class TerminalService:
             try:
                 result = int(result)
                 if result not in [1, 2, 3]:
-                    print(2 + "no")
+                    print(2 + "no") #fails, forces except
             except:
                 print("pick an appropriate number")
         return result
-        
+    
+    def to_switch_or_not_to_switch(self, prompt, index):
+        result = ""
+        while result not in ['s', str(index)]:
+            result = input(prompt)
+            if result.lower() == 's' or result == str(index):
+                return result
+            else:
+                print(f"Pick an appropriate response ['s' or '{index}']")
+
+
     # Not used in this case
     def write_text(self, text):
         """Displays the given text on the terminal. 
