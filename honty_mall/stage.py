@@ -37,7 +37,7 @@ class Stage():
         # check to see if the car is behind that door
         if door_to_maybe_open.check_if_surprise():
         # if so, choose the other door and open it
-            (set(self._remaining_doors) - set(door_to_maybe_open)).open()
+            list(set(self._remaining_doors) - set([door_to_maybe_open]))[0].open()
         # if not, open the door
         elif door_to_maybe_open.check_if_surprise() == False:
             door_to_maybe_open.open()
