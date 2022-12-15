@@ -63,7 +63,7 @@ class TerminalService:
             self (TerminalService): An instance of TerminalService.
             text (string): The text to display.
         """
-        pprint(text)
+        print(text)
 
     def write_word(self, array):
         """Displays the given array on the terminal. 

@@ -19,7 +19,7 @@ class Stage():
     def make_it_or_break_it(self, index):
         self._stay_or_switch = self._terminal_service.to_switch_or_not_to_switch(f"You chose door {index}. Do you think you chose the correct door, or would you like to switch?\nEnter '{index}' to stick with door #{index}, or 's' to switch doors: ", index)
         
-        if self._stay_or_switch == index:
+        if self._stay_or_switch == str(index):
             self._doors[index - 1].open()
         elif self._stay_or_switch.lower() == 's':
             # look at remaining doors for open == False

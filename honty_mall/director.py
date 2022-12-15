@@ -26,3 +26,4 @@ class Director():
 
         self._stage.present_stage()
 
+        self._terminal_service.write_text("Game Over")
